@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:minHeight="400dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/android_logo"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29.90"
+            android:background="#cccccc"
+            android:id="@+id/oldPriceTextView"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30.90"
+            android:background="#FFFF00"
+            android:id="@+id/newPriceTextView"
+            android:layout_below="@+id/oldPriceTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-10%"
+            android:background="#FF0000"
+            android:id="@+id/discountTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/productImageView"
+            android:layout_alignEnd="@+id/productImageView" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="157dp">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="bottom"
+            android:text="Detska kolichka hipopopopopopotamusDetska kolichka hipopopopopopotamusDetska kolichka hipopopopopopotamusDetska kolichka hipopopopopopotamus"
+            android:textSize="15dp"
+
+            android:layout_below="@+id/storeNameTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></TextView>
+
+        <TextView
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:text="Shop Name: HIPPPPPPPPOOOLAND"
+            android:id="@+id/storeNameTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/nameTextView"
+            android:layout_alignEnd="@+id/nameTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linkToItemTextView"
+            android:text="http://www.emag.bg/peleni-huggies-ultra-confort-giga-pack-3-girl-94-broja-5029053544632/pd/DW26XYBBM/"
+            android:autoLink="web"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</LinearLayout>
