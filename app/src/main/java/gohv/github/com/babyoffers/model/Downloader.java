@@ -21,7 +21,7 @@ import gohv.github.com.babyoffers.ui.MainActivity;
 
 public class Downloader {
     private final String OFFERS_URL = "http://95.111.32.73:12345/offers";
-
+    private final String test = "";
 
     private InputStream getStream(String urlString) {
         try {

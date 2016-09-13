@@ -6,17 +6,13 @@
     android:orientation="vertical"
     android:padding="5dp">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="110dp"
-        android:gravity="center">
-
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="110dp" android:gravity="center">
         <ImageView
             android:id="@+id/productImageView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/android_logo"></ImageView>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,29 +20,44 @@
             android:text="29.90"
             android:background="#cccccc"
             android:id="@+id/oldPriceTextView"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:padding="3dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="13dp"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30.90"
-            android:background="#FFFF00"
+            android:background="#cbf9c9"
             android:id="@+id/newPriceTextView"
             android:layout_below="@+id/oldPriceTextView"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:padding="3dp"
+            android:textSize="13dp"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-10%"
-            android:background="#FF0000"
+            android:background="#ff9074"
             android:id="@+id/discountTextView"
             android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/productImageView"
-            android:layout_alignEnd="@+id/productImageView" />
+            android:layout_alignEnd="@+id/productImageView"
+            android:padding="3dp"
+            android:textSize="13dp"
+            android:textColor="#000000" />
 
-
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 
     <TextView

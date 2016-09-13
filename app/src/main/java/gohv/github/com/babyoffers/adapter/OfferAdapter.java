@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.InputStream;
@@ -60,7 +61,8 @@ public class OfferAdapter extends BaseAdapter {
         discountTextVIew.setBackgroundColor(Color.parseColor(offer.getDiscountColor(offer.getDiscount())));
 
         productImageView = (ImageView) gridView.findViewById(R.id.productImageView);
-        new ImageDownloader(productImageView).execute(offer);
+
+        new ImageDownloader(gridView).execute(offer);
 
         return gridView;
     }
@@ -81,10 +83,13 @@ public class OfferAdapter extends BaseAdapter {
     }
 
     class ImageDownloader extends AsyncTask<Offer, Void, Offer> {
-        ImageView bmImage;
+        ImageView image;
+        ProgressBar progressBar;
 
-        public ImageDownloader(ImageView bmImage) {
-            this.bmImage = bmImage;
+        public ImageDownloader(View container)
+        {
+            this.image = (ImageView)container.findViewById(R.id.productImageView);
+            this.progressBar = (ProgressBar)container.findViewById(R.id.progressBar1);
         }
 
         protected Offer doInBackground(Offer... urls) {
@@ -107,8 +112,10 @@ public class OfferAdapter extends BaseAdapter {
             return offer;
         }
 
-        protected void onPostExecute(Offer result) {
-            bmImage.setImageBitmap(result.getProductImage());
+        protected void onPostExecute(Offer result)
+        {
+            image.setImageBitmap(result.getProductImage());
+            progressBar.setVisibility(View.INVISIBLE);
         }
     }
 
