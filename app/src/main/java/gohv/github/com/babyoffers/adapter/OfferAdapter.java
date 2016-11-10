@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.InputStream;
 import java.util.List;
 
@@ -114,7 +116,8 @@ public class OfferAdapter extends BaseAdapter {
 
         protected void onPostExecute(Offer result)
         {
-            image.setImageBitmap(result.getProductImage());
+           // image.setImageBitmap(result.getProductImage());
+            Picasso.with(context).load(result.getProductPhoto()).into(image);
             progressBar.setVisibility(View.INVISIBLE);
         }
     }

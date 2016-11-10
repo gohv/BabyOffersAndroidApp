@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -170,7 +172,8 @@ public class MainActivity extends AppCompatActivity {
         discountTextView.setText(String.valueOf("-" + offer.getDiscount()) + "%");
         discountTextView.setBackgroundColor(Color.parseColor(offer.getDiscountColor(offer.getDiscount())));
         shopNameTextView.setText(String.valueOf("Store Name: " + offer.getShopName()));
-        productImageView.setImageBitmap(offer.getProductImage());
+        //productImageView.setImageBitmap(offer.getProductImage());
+        Picasso.with(this).load(offer.getProductPhoto()).into(productImageView);
         productNameTextView.setText(offer.getProductName());
         linkToItemTextView.setText(offer.getLinkToItem());
 
